@@ -5,9 +5,7 @@ var app = new Vue({
       generi: [],
       scelta: ""
     },
-    methods: function getCategories(categoria){
 
-    },
     mounted: function(){
       var self = this;
 
@@ -16,8 +14,8 @@ var app = new Vue({
         self.albums = risposta.data.response;
 
         self.albums.forEach((album) => {
-          if ( this.generi.includes(album.genre) == false) {
-            this.generi.push(album.genre);
+          if ( self.generi.includes(album.genre) == false) {
+            self.generi.push(album.genre);
           }
         });
     });

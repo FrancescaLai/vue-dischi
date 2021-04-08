@@ -16,21 +16,24 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Vue dischi</title>
 </head>
-<body>
+<body id="root">
 
   <header>
     <img src="img/download.png" alt="logo">
   </header>
 
   <main>
-    <div class="artist-box">
+
+    <div class="artist-box" v-for="album in albums">
       <div class="artist-album">
         <img class="artist-img" src="img/yunglean.jpg" alt="artist">
         <div class="overlay"><i class="far fa-play-circle"></i></div>
       </div>
       <a href="#"><h5 class="white-txt capslock">nome album</h5></a>
       <a href="#"><p>nome artista</p></a>
+      <a href="#"><p>{{ album.year }}</p></a>
     </div>
+
   </main>
 
 

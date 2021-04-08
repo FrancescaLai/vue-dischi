@@ -35,6 +35,14 @@
         </div>
       </div>
 
+      <div>
+        <label for="type">Filtra per genere</label>
+        <select name="type" v-model="scelta">
+          <option value="">All</option>
+          <option v-for="album in genres">{{ album.genre }}</option>
+        </select>
+      </div>
+
     </main>
 
   </div>

@@ -8,7 +8,7 @@ var app = new Vue({
 
       axios.get("https://flynn.boolean.careers/exercises/api/array/music")
         .then(function (risposta) {
-        this.albums = risposta.data.response;
+        self.albums = risposta.data.response;
     });
   }
 });

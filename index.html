@@ -27,11 +27,11 @@
 
       <div class="artist-box" v-for="album in albums">
         <div class="artist-album">
-          <img class="artist-img" src="img/yunglean.jpg" alt="artist">
+          <img class="artist-img" :src="album.poster" :alt="album.title">
           <div class="overlay"><i class="far fa-play-circle"></i></div>
-          <a href="#"><h5 class="white-txt capslock">nome album</h5></a>
-          <a href="#"><p>nome artista</p></a>
-          <a href="#"><p>{{album.year}}</p></a>
+          <a href="#"><h5 class="white-txt capslock">{{ album.title }}</h5></a>
+          <a href="#"><p>{{ album.author }}</p></a>
+          <a href="#"><p>{{ album.year }}</p></a>
         </div>
       </div>
 

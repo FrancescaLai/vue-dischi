@@ -28,7 +28,7 @@ header img{
 }
 
 main{
-  height: 100vh;
+  height: 100%;
   background-color: #1E2D3B;
   padding-top: 60px;
 }
@@ -40,6 +40,7 @@ main{
   background-color: #2E3A46;
   padding: 15px 15px 50px 15px;
   margin-left: 15px;
+  display: inline-block;
 }
 
 .artist-album{

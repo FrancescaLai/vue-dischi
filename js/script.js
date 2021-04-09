@@ -5,7 +5,6 @@ var app = new Vue({
       generi: [],
       scelta: ""
     },
-
     mounted: function(){
       var self = this;
 
@@ -13,9 +12,13 @@ var app = new Vue({
         .then(function (risposta) {
         self.albums = risposta.data.response;
 
-        self.albums.forEach((album) => {
-          if ( self.generi.includes(album.genre) == false) {
-            self.generi.push(album.genre);
+        var yearOrdered = risposta.data.response.sort(function(a, b){
+          return a.year - b.year;
+        });
+
+        self.albums.forEach((item) => {
+          if ( self.generi.includes(item.genre) == false) {
+            self.generi.push(item.genre);
           }
         });
     });
